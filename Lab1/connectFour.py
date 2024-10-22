@@ -84,6 +84,7 @@ players : list, default None
         """
 Returns the spots (column numbers) where you can place a piece.
 
+Returns:
 moves : list
  List of column numbers where a piece can be placed.
         """
@@ -99,6 +100,7 @@ moves : list
         """
 Drops a piece into the chosen column to make a move.
 
+Returns:
 move: int
    The column number where the player wants to drop a piece.
         """
@@ -113,6 +115,7 @@ move: int
 Checks if the current player has won by finding four pieces in a row 
 (up, down, left, right, diagonally).
 
+Returns:
 bool: True if the player won, False otherwise.
         """
         for i in range(BOARD_HORIZONTAL_SIZE):
@@ -136,6 +139,7 @@ bool: True if the player won, False otherwise.
         """
 Checks if the game has ended by winning or when no more moves are left.
 
+Returns:
 bool: True if the game is over, False otherwise.
         """
         return self.win() or len(self.possible_moves()) == 0
@@ -153,6 +157,7 @@ Shows the current state of the board in console.
         """
 Checks if a move is good for AI.
 
+Returns:
 Number: 100 if wins, 0 if not
         """
         return 100 if game.win() else 0  # For the AI
